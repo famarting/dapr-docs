@@ -68,7 +68,7 @@ The AWS authentication token will be dynamically rotated before it's expiration 
 | `awsAccessKey` | N | AWS access key associated with an IAM account | `"AKIAIOSFODNN7EXAMPLE"` |
 | `awsSecretKey` | N | The secret key associated with the access key | `"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"` |
 | `awsSessionToken` | N | AWS session token to use. A session token is only required if you are using temporary security credentials. | `"TOKEN"` |
-| `awsIamRoleArn` | N  | IAM role that has access to AWS Relational Database Service. This is another option to authenticate with AWS aside from the AWS Credentials. | `"arn:aws:iam::123456789:role/rdsRole"` |
+| `awsIamRoleArn` | N  | IAM role to assume that has access to AWS Relational Database Service. This is another option to authenticate with AWS aside from the AWS Credentials. | `"arn:aws:iam::123456789:role/rdsRole"` |
 | `awsStsSessionName` | N  | Represents the session name for assuming a role. | `"PGDefaultSession"` |
 
 ### Other metadata options
