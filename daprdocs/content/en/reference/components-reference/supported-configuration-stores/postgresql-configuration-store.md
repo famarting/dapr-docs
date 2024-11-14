@@ -91,9 +91,11 @@ The AWS authentication token will be dynamically rotated before it's expiration 
 | `useAWSIAM` | Y | Must be set to `true` to enable the component to retrieve access tokens from AWS IAM. This authentication method only works with AWS Relational Database Service for PostgreSQL databases. | `"true"` |
 | `connectionString` | Y | The connection string for the PostgreSQL database.<br>This must contain an already existing user, which corresponds to the name of the user created inside PostgreSQL that maps to the AWS IAM policy. This connection string should not contain any password. Note that the database name field is denoted by dbname with AWS. | `"host=mydb.postgres.database.aws.com user=myapplication port=5432 dbname=my_db sslmode=require"`|
 | `awsRegion` | Y | The AWS Region where the AWS Relational Database Service is deployed to. | `"us-east-1"` |
-| `awsAccessKey` | Y | AWS access key associated with an IAM account | `"AKIAIOSFODNN7EXAMPLE"` |
-| `awsSecretKey` | Y | The secret key associated with the access key | `"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"` |
+| `awsAccessKey` | N | AWS access key associated with an IAM account | `"AKIAIOSFODNN7EXAMPLE"` |
+| `awsSecretKey` | N | The secret key associated with the access key | `"wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"` |
 | `awsSessionToken` | N | AWS session token to use. A session token is only required if you are using temporary security credentials. | `"TOKEN"` |
+| `awsIamRoleArn` | N  | IAM role that has access to AWS Relational Database Service. This is another option to authenticate with AWS aside from the AWS Credentials. | `"arn:aws:iam::123456789:role/rdsRole"` |
+| `awsStsSessionName` | N  | Represents the session name for assuming a role. | `"PGDefaultSession"` |
 
 ### Other metadata options
 
